@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Kalkulator Matematik Segitiga</title>
+</head>
+
+<body>
+    <header>
+        <h1>Kalkulator Matematik Segitiga</h1>
+    </header>
+
+    <div class="calculator-container">
+        <img src="img/triangle_image.png" alt="Triangle Image" class="triangle-image">
+
+        <div class="calculation-buttons">
+            <button type="button" onclick="selectCalculation('keliling')">Hitung Keliling Segitiga</button>
+            <button type="button" onclick="selectCalculation('luas')">Hitung Luas Segitiga</button>
+        </div>
+
+        <div id="inputForms">
+            <!-- Form for Keliling -->
+            <form id="kelilingForm" style="display: none;">
+                <label for="sideA">Sisi A:</label>
+                <input type="number" id="sideA" required>
+
+                <label for="sideB">Sisi B:</label>
+                <input type="number" id="sideB" required>
+
+                <label for="sideC">Sisi C:</label>
+                <input type="number" id="sideC" required>
+
+                <button type="button" onclick="calculate('keliling')">Hitung</button>
+                <button type="button" onclick="resetForm('keliling')">Reset</button>
+            </form>
+
+            <!-- Form for Luas -->
+            <form id="luasForm" style="display: none;">
+                <label for="base">Panjang Alas:</label>
+                <input type="number" id="base" required>
+
+                <label for="height">Tinggi:</label>
+                <input type="number" id="height" required>
+
+                <button type="button" onclick="calculate('luas')">Hitung</button>
+                <button type="button" onclick="resetForm('luas')">Reset</button>
+            </form>
+        </div>
+
+        <div id="subtitle"></div>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
